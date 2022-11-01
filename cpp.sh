@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Make sure there is one argument
+if [ $# -lt 1 ]; then
+  echo 1>&2 "$0: not enough arguments"
+  exit 2
+fi
+
 project_name=$1
 echo "Creating C++ Project $project_name"
 
